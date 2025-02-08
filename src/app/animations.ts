@@ -42,6 +42,16 @@ import {
     ])
   ]);
   
+  export const slideDown = trigger('slideDown', [
+    transition(':enter', [
+      style({ opacity: 0, height: 0 }),
+      animate('200ms ease-out', style({ opacity: 1, height: '*' }))
+    ]),
+    transition(':leave', [
+      animate('200ms ease-in', style({ opacity: 0, height: 0 }))
+    ])
+  ]);
+  
   export const sectionAnimation = trigger('sectionAnimation', [
     transition(':enter', [
       style({ opacity: 0, transform: 'translateY(30px)' }),
