@@ -1,14 +1,16 @@
 // components/experience/experience.component.ts
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { sectionAnimation, staggerFadeInUp } from '../../animations';
 
 @Component({
   selector: 'app-experience',
   standalone: true, 
   imports: [CommonModule],
+  animations: [sectionAnimation, staggerFadeInUp],
   template: `
-    <section id="experience" class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto">
+    <section [@sectionAnimation] id="experience" class="py-16 bg-white">
+      <div [@staggerFadeInUp] class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-[#1a2b3b] mb-8">Work Experience</h2>
         <div class="space-y-8">
           <div class="border-l-4 border-[#2d6bff] pl-4">

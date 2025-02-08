@@ -1,13 +1,15 @@
 // components/about/about.component.ts
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { sectionAnimation } from '../../animations';
 
 @Component({
   selector: 'app-about',
   standalone: true,
+  animations: [sectionAnimation],
   imports: [CommonModule],
   template: `
-    <section id="about" class="py-16">
+    <section [@sectionAnimation] id="about" class="py-16">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-4xl font-bold text-[#1a2b3b] mb-6">Product Management Professional</h2>
         <p class="text-lg text-[#4a5567] mb-8">

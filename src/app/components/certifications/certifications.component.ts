@@ -1,14 +1,16 @@
 // components/certifications/certifications.component.ts
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { sectionAnimation, staggerFadeInUp } from '../../animations';
 
 @Component({
   selector: 'app-certifications',
   standalone: true, 
   imports: [CommonModule],
+  animations: [staggerFadeInUp],
   template: `
     <section id="certifications" class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto">
+      <div [@staggerFadeInUp] class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-[#1a2b3b] mb-8">Certifications</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="p-4 border border-[#e5e7eb] rounded-lg hover:border-[#2d6bff] transition-colors">

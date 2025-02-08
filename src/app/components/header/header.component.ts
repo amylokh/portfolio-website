@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { headerAnimation } from '../../animations';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
+  animations: [headerAnimation],
   template: `
-    <header class="bg-white shadow-sm">
+    <header [@headerAnimation] class="bg-white shadow-sm">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-[#1a2b3b]">Amey Lokhande</h1>
         <div class="space-x-6">
