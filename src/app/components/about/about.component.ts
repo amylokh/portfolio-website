@@ -23,7 +23,7 @@ import { sectionAnimation } from '../../animations';
                 />
               </div>
               <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-md text-center min-w-[160px]">
-                <span class="text-[#2d6bff] font-semibold">Product Manager</span>
+                <span class="text-[#2d6bff] font-semibold">Technology Associate</span>
               </div>
             </div>
           </div>
