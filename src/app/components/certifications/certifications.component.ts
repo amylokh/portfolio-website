@@ -1,0 +1,38 @@
+// components/certifications/certifications.component.ts
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-certifications',
+  standalone: true, 
+  imports: [CommonModule],
+  template: `
+    <section id="certifications" class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#1a2b3b] mb-8">Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-4 border border-[#e5e7eb] rounded-lg hover:border-[#2d6bff] transition-colors">
+            <h3 class="font-semibold">Product Strategy Micro-Certification</h3>
+            <p class="text-[#4a5567]">Product School, 2023</p>
+          </div>
+          
+          <div class="p-4 border border-[#e5e7eb] rounded-lg hover:border-[#2d6bff] transition-colors">
+            <h3 class="font-semibold">Diploma in Visualizing data</h3>
+            <p class="text-[#4a5567]">Tableau and PowerBI, Kubicle 2022</p>
+          </div>
+          
+          <div class="p-4 border border-[#e5e7eb] rounded-lg hover:border-[#2d6bff] transition-colors">
+            <h3 class="font-semibold">Foundations of Project Management</h3>
+            <p class="text-[#4a5567]">Coursera, 2022</p>
+          </div>
+          
+          <div class="p-4 border border-[#e5e7eb] rounded-lg hover:border-[#2d6bff] transition-colors">
+            <h3 class="font-semibold">Foundations of Data Analytics</h3>
+            <p class="text-[#4a5567]">Coursera, 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `
+})
+export class CertificationsComponent {}
