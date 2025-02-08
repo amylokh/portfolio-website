@@ -1,13 +1,16 @@
 // components/about/about.component.ts
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { sectionAnimation } from '../../animations';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   animations: [sectionAnimation],
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   template: `
     <section [@sectionAnimation] id="about" class="py-7">
       <div class="max-w-4xl mx-auto px-4">
@@ -23,7 +26,9 @@ import { sectionAnimation } from '../../animations';
                 />
               </div>
               <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-md text-center min-w-[160px]">
-                <span class="text-[#2d6bff] font-semibold">Technology Associate</span>
+                <span class="text-[#2d6bff] font-semibold">
+                  Technology Associate
+                </span>
               </div>
             </div>
           </div>
@@ -38,15 +43,17 @@ import { sectionAnimation } from '../../animations';
               I'm passionate about leveraging technical and analytical skills to drive user-centric product 
               development and strategic business growth.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a href="mailto:amylokh@gmail.com" 
-                 class="bg-[#2d6bff] text-white px-6 py-3 rounded-lg hover:bg-[#1a5aff] transition-colors duration-300 shadow-md hover:shadow-lg">
+                 class="flex items-center justify-center bg-[#2d6bff] text-white px-6 py-3 rounded-lg hover:bg-[#1a5aff] transition-colors duration-300 shadow-md hover:shadow-lg">
+                <fa-icon [icon]="emailIcon" class="mr-2"></fa-icon>
                 Contact Me
               </a>
               <a href="https://www.linkedin.com/in/amey-lokhande/" 
                  target="_blank"
                  rel="noopener noreferrer"
-                 class="border-2 border-[#2d6bff] text-[#2d6bff] px-6 py-3 rounded-lg hover:bg-[#2d6bff] hover:text-white transition-colors duration-300 shadow-md hover:shadow-lg">
+                 class="flex items-center justify-center border-2 border-[#2d6bff] text-[#2d6bff] px-6 py-3 rounded-lg hover:bg-[#2d6bff] hover:text-white transition-colors duration-300 shadow-md hover:shadow-lg">
+                <fa-icon [icon]="linkedinIcon" class="mr-2"></fa-icon>
                 LinkedIn
               </a>
             </div>
@@ -56,4 +63,8 @@ import { sectionAnimation } from '../../animations';
     </section>
   `
 })
-export class AboutComponent {}
+export class AboutComponent {
+  userIcon = faUser;
+  emailIcon = faEnvelope;
+  linkedinIcon = faLinkedin;
+}
