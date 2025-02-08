@@ -8,7 +8,14 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "architect": {
+        "build": {
+          "options": {
+            "baseHref": "/portfolio-website/"
+          }
         }
+      }
       },
       "root": "",
       "sourceRoot": "src",
