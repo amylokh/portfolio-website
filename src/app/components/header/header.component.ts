@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { headerAnimation, navItemAnimation } from '../../animations';
+import { headerAnimation, navItemAnimation, slideDown } from '../../animations';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
-  animations: [headerAnimation, navItemAnimation],
+  animations: [headerAnimation, navItemAnimation, slideDown],
   template: `
     <header [@headerAnimation] class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-50">
       <nav class="container mx-auto px-6 py-5">
