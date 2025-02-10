@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { sectionAnimation, staggerFadeInUp } from '../../animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faBuilding } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-experience',
@@ -13,5 +13,6 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './experience.component.html'
 })
 export class ExperienceComponent {
-  calendarIcon = faCalendarAlt;
+  calendarIcon = faCalendar;
+  buildingIcon = faBuilding;
 }
