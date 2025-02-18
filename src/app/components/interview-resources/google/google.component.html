@@ -1,0 +1,63 @@
+<section class="py-16 bg-white min-h-screen">
+  <div class="max-w-4xl mx-auto px-4">
+    <button 
+      (click)="goBack()" 
+      class="flex items-center gap-2 text-[#4a5567] hover:text-[#1a2b3b] mb-8"
+    >
+      <fa-icon [icon]="backIcon"></fa-icon>
+      Back to Resources
+    </button>
+
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-6">
+        <img 
+          src="assets/images/google-logo.png" 
+          alt="Google logo" 
+          class="w-16 h-16 object-contain"
+        >
+        <div>
+          <h1 class="text-3xl font-bold text-[#1a2b3b]">Google PM Interview Guide</h1>
+          <p class="text-[#4a5567]">Product Manager Interview Preparation Resources</p>
+        </div>
+      </div>
+      
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r mb-8">
+        <p class="text-blue-700">
+          Preview of the complete interview preparation guide. These resources are available for free to help aspiring Product Managers.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <ng-container *ngFor="let topic of topics">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+          <h3 class="text-xl font-semibold text-[#1a2b3b] mb-4">{{topic.title}}</h3>
+          <ul class="space-y-3">
+            <li *ngFor="let point of topic.points" class="flex items-start gap-2">
+              <fa-icon 
+                [icon]="checkIcon" 
+                class="text-green-500 mt-1 flex-shrink-0"
+              ></fa-icon>
+              <span class="text-[#4a5567]">{{point}}</span>
+            </li>
+          </ul>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="text-center bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">
+      <h2 class="text-2xl font-bold text-[#1a2b3b] mb-4">Ready to Get Started?</h2>
+      <p class="text-[#4a5567] mb-6 max-w-2xl mx-auto">
+        Get access to detailed frameworks, sample answers, and personalized guidance. 
+        These resources are completely free - I'm here to help you succeed in your PM journey.
+      </p>
+      <a 
+        href="mailto:amylokh@gmail.com" 
+        class="inline-flex items-center gap-2 bg-[#2d6bff] text-white px-8 py-4 rounded-lg hover:bg-[#1a5aff] transition-colors"
+      >
+        <fa-icon [icon]="emailIcon"></fa-icon>
+        Contact Me for Resources
+      </a>
+    </div>
+  </div>
+</section>
