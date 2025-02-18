@@ -23,7 +23,11 @@ export class InterviewResourcesComponent {
   constructor(public router: Router) { }
 
   navigateToDetails(company: string) {
-    this.router.navigate([`/interview-resources/${company.toLowerCase()}`]);
+    if (company.toLowerCase() === 'google') {
+      this.router.navigate(['/interview-resources/google']);
+    } else {
+      this.router.navigate([`/interview-resources/${company.toLowerCase()}`]);
+    }
   }
 
   lockIcon = faLock;

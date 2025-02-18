@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { GoogleComponent } from './components/interview-resources/google/google.component';
 import { MainComponent } from './components/main/main.component';
+import { PageUnderProgressComponent } from './components/page-under-progress/page-under-progress.component';
 
 export const routes: Routes = [
   {
@@ -15,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'interview-resources/google',
     component: GoogleComponent
+  },
+  {
+    path: 'interview-resources/:company',
+    component: PageUnderProgressComponent
   }
 ];

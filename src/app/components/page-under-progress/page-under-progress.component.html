@@ -1,0 +1,28 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+  <div class="text-center">
+    <!-- Back button -->
+    <button 
+      (click)="goBack()"
+      class="mb-8 flex items-center gap-2 text-[#4a5567] hover:text-[#1a2b3b] transition-colors">
+      <fa-icon [icon]="backIcon"></fa-icon>
+      Back to Resources
+    </button>
+
+    <!-- Animation container -->
+    <div class="mb-8">
+      <fa-icon 
+        [icon]="cogIcon" 
+        class="text-6xl text-[#2d6bff] animate-spin-slow">
+      </fa-icon>
+    </div>
+
+    <h1 class="text-3xl font-bold text-[#1a2b3b] mb-4">
+      Page Under Construction
+    </h1>
+    
+    <p class="text-lg text-[#4a5567] max-w-md mx-auto mb-8">
+      We're working hard to bring you detailed interview resources for this company. 
+      Check back soon for updates!
+    </p>
+  </div>
+</div>
