@@ -16,6 +16,7 @@ export class HeaderComponent {
     { href: '#about', label: 'About' },
     { href: '#experience', label: 'Experience' },
     { href: '#education', label: 'Education' },
+    { href: '#product-portfolio', label: 'Product Portfolio' },
     { href: '#interview-resources', label: 'Interview Resources' },
     { href: '#contact', label: 'Contact' }
   ];

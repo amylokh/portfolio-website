@@ -6,6 +6,7 @@ import { EducationComponent } from '../education/education.component';
 import { CertificationsComponent } from '../certifications/certifications.component';
 import { ContactComponent } from '../contact/contact.component';
 import { InterviewResourcesComponent } from '../interview-resources/interview-resources.component';
+import { ProductPortfolioComponent } from '../product-portfolio/product-portfolio.component';
 
 @Component({
   selector: 'app-main',
@@ -15,6 +16,7 @@ import { InterviewResourcesComponent } from '../interview-resources/interview-re
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
+    ProductPortfolioComponent,
     InterviewResourcesComponent,
     CertificationsComponent,
     ContactComponent
@@ -23,6 +25,7 @@ import { InterviewResourcesComponent } from '../interview-resources/interview-re
     <app-about></app-about>
     <app-experience></app-experience>
     <app-education></app-education>
+    <app-product-portfolio></app-product-portfolio>
     <app-interview-resources></app-interview-resources>
     <app-certifications></app-certifications>
     <app-contact></app-contact>
