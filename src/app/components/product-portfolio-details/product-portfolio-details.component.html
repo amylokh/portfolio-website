@@ -1,0 +1,49 @@
+<section class="py-16 px-4 md:px-8 bg-white min-h-screen">
+  <div class="max-w-6xl mx-auto">
+    <!-- Back Button -->
+    <a routerLink="/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8 transition duration-300">
+      <fa-icon [icon]="arrowIcon"></fa-icon>
+      <span class="font-semibold">Back to Home</span>
+    </a>
+
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Product Portfolio</h1>
+      <p class="text-xl text-gray-700">
+        A comprehensive collection of my work in product management, design, and strategy.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div 
+        *ngFor="let card of portfolioCards" 
+        [routerLink]="card.route"
+        class="bg-gray-50 border-2 border-gray-200 hover:border-blue-600 rounded-lg p-6 cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-lg group">
+        
+        <!-- Icon -->
+        <div class="mb-4">
+          <fa-icon 
+            [icon]="card.icon" 
+            class="text-4xl text-gray-400 group-hover:text-blue-600 transition duration-300">
+          </fa-icon>
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition duration-300">
+          {{ card.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-sm text-gray-600 leading-relaxed">
+          {{ card.description }}
+        </p>
+
+        <!-- Arrow indicator -->
+        <div class="mt-4 flex items-center justify-end text-blue-600 opacity-0 group-hover:opacity-100 transition duration-300">
+          <span class="text-sm font-semibold">Explore →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

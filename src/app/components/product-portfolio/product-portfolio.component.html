@@ -1,8 +1,23 @@
-<section id="product-portfolio" class="py-16 px-4 md:px-8 bg-gray-50">
+<section id="product-portfolio" class="py-16 px-4 md:px-8 bg-white">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Product Portfolio</h2>
+    <div class="flex items-center gap-3 mb-6">
+      <fa-icon [icon]="briefcaseIcon" class="text-4xl text-blue-600"></fa-icon>
+      <h2 class="text-3xl md:text-4xl font-bold">Product Portfolio</h2>
+    </div>
+    
     <p class="text-lg text-gray-700 mb-8">
       Explore everything about product management here. From strategy and metrics to case studies and real-world examples.
     </p>
+
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+      <p class="text-gray-800 mb-6">
+        Explore my product portfolio which consists of guesstimates, product design problems, product strategy problems, product metrics and my favorite books.
+      </p>
+      <a 
+        routerLink="/product-portfolio-details" 
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+        Explore My Product Portfolio
+      </a>
+    </div>
   </div>
 </section>

@@ -2,11 +2,16 @@ import { Routes } from '@angular/router';
 import { GoogleComponent } from './components/interview-resources/google/google.component';
 import { MainComponent } from './components/main/main.component';
 import { PageUnderProgressComponent } from './components/page-under-progress/page-under-progress.component';
+import { ProductPortfolioDetailsComponent } from './components/product-portfolio-details/product-portfolio-details.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: MainComponent  // Create this component to hold your main page content
+  },
+  {
+    path: 'product-portfolio-details',
+    component: ProductPortfolioDetailsComponent
   },
   { 
     path: 'interview-resources',
