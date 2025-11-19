@@ -45,5 +45,9 @@ export const routes: Routes = [
   {
     path: 'product-portfolio-details/product-strategy',
     component: ProductStrategyComponent
-  }
+  },
+  {
+    path: 'under-construction',
+    component: PageUnderProgressComponent
+  },
 ];

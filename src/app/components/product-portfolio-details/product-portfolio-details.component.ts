@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowLeft, faCalculator, faPalette, faChartBar, faBook } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faCalculator, faPalette, faChartBar, faChessKing, faBook } from '@fortawesome/free-solid-svg-icons';
+import { ContactComponent } from "../contact/contact.component";
 
 interface PortfolioCard {
   id: string;
@@ -15,7 +16,7 @@ interface PortfolioCard {
 @Component({
   selector: 'app-product-portfolio-details',
   standalone: true,
-  imports: [CommonModule, RouterLink, FontAwesomeModule],
+  imports: [CommonModule, RouterLink, FontAwesomeModule, ContactComponent],
   templateUrl: './product-portfolio-details.component.html',
   styleUrl: './product-portfolio-details.component.scss'
 })
@@ -26,7 +27,7 @@ export class ProductPortfolioDetailsComponent {
     {
       id: 'guesstimates',
       title: 'Guesstimate',
-      description: 'Explore estimation problems and techniques used in product management to make data-driven decisions.',
+      description: 'Explore guesstimates problems and techniques used in product management to make data-driven decisions.',
       icon: faCalculator,
       route: '/product-portfolio-details/guesstimates'
     },
@@ -48,7 +49,7 @@ export class ProductPortfolioDetailsComponent {
       id: 'product-strategy',
       title: 'Product Strategy',
       description: 'Understand strategic frameworks, market analysis, and long-term product vision planning.',
-      icon: faBook,
+      icon: faChessKing,
       route: '/product-portfolio-details/product-strategy'
     },
     {
