@@ -42,7 +42,7 @@ export class ProductPortfolioDetailsComponent {
       title: 'Product Metrics',
       description: 'Learn about key metrics, analytics, and measurement strategies that drive product success.',
       icon: faChartBar,
-      route: '/under-construction'
+      route: '/product-portfolio-details/product-metrics'
     },
     {
       id: 'product-strategy',

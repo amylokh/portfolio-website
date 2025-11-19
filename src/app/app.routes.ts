@@ -4,6 +4,7 @@ import { MainComponent } from './components/main/main.component';
 import { PageUnderProgressComponent } from './components/page-under-progress/page-under-progress.component';
 import { ProductPortfolioDetailsComponent } from './components/product-portfolio-details/product-portfolio-details.component';
 import { GuessestimatesComponent } from './components/product-portfolio-details/guesstimates/guesstimates.component';
+import { ProductMetricsComponent } from './components/product-portfolio-details/product-metrics/product-metrics.component';
 
 export const routes: Routes = [
   {
@@ -31,4 +32,8 @@ export const routes: Routes = [
     path: 'product-portfolio-details/guesstimates',
     component: GuessestimatesComponent
   },
+  {
+    path: 'product-portfolio-details/product-metrics',
+    component: ProductMetricsComponent
+  }
 ];

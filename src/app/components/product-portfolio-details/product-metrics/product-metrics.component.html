@@ -1,0 +1,81 @@
+<section class="py-16 px-4 md:px-8 bg-white min-h-screen">
+  <div class="max-w-6xl mx-auto">
+    <!-- Back Button -->
+    <a routerLink="/product-portfolio-details" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8 transition duration-300">
+      <fa-icon [icon]="arrowIcon"></fa-icon>
+      <span class="font-semibold">Back to Portfolio</span>
+    </a>
+
+    <!-- Header Section -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Product Metrics</h1>
+      <p class="text-xl text-gray-700 mb-4">
+        Explore the North Star Metrics and product goals for prominent Google products.
+      </p>
+    </div>
+
+    <!-- Products Covered Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900">Products Covered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div *ngFor="let product of products" class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 text-center">
+          <p class="text-gray-900 font-semibold text-sm">{{ product }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF Document Section -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold mb-8 text-gray-900">North Star Metrics Reference</h2>
+      <p class="text-gray-600 mb-6">
+        View the comprehensive PDF guide containing North Star Metrics, product goals, and detailed information for all Google products.
+      </p>
+
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+        <!-- Header -->
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center gap-4">
+            <fa-icon [icon]="pdfIcon" class="text-4xl text-red-600"></fa-icon>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">{{ metricsDocument.title }}</h3>
+              <p class="text-gray-600 mt-1">{{ metricsDocument.description }}</p>
+            </div>
+          </div>
+          <button 
+            (click)="downloadDocument(metricsDocument.downloadUrl, metricsDocument.fileName)"
+            class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 whitespace-nowrap">
+            <fa-icon [icon]="downloadIcon" class="text-lg"></fa-icon>
+            <span class="text-sm">Download</span>
+          </button>
+        </div>
+
+        <!-- Embedded PDF Preview -->
+        <div class="bg-gray-100 rounded-lg overflow-hidden border border-gray-300">
+          <iframe 
+            [src]="metricsDocument.embeddedUrl" 
+            class="w-full"
+            style="height: 600px;"
+            title="{{ metricsDocument.title }}"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- File Info -->
+        <p class="text-sm text-gray-500 mt-4">{{ metricsDocument.fileName }}</p>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg p-8 text-center">
+      <h3 class="text-2xl font-bold mb-4">Ready to Learn More About Product Metrics?</h3>
+      <p class="text-lg mb-6 opacity-90">
+        Download the reference guide and explore how leading products define and track success metrics.
+      </p>
+      <a 
+        routerLink="/product-portfolio-details"
+        class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+        Back to Product Portfolio
+      </a>
+    </div>
+  </div>
+</section>
