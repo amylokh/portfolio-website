@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,7 +21,7 @@ interface StrategyDocument {
   templateUrl: './product-strategy.component.html',
   styleUrl: './product-strategy.component.scss'
 })
-export class ProductStrategyComponent {
+export class ProductStrategyComponent implements OnInit {
   arrowIcon = faArrowLeft;
   downloadIcon = faDownload;
   pdfIcon = faFilePdf;
@@ -63,6 +63,10 @@ export class ProductStrategyComponent {
       embeddedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('assets/product-strategy/Strategy Questions.pdf'),
       downloadUrl: 'assets/product-strategy/Strategy Questions.pdf'
     };
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   downloadDocument(url: string, fileName: string): void {

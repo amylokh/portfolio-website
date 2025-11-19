@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -22,7 +22,7 @@ interface BookDocument {
   templateUrl: './favorite-books.component.html',
   styleUrl: './favorite-books.component.scss'
 })
-export class FavoriteBooksComponent {
+export class FavoriteBooksComponent implements OnInit {
   arrowIcon = faArrowLeft;
   downloadIcon = faDownload;
   bookIcon = faBook;
@@ -59,6 +59,10 @@ export class FavoriteBooksComponent {
         downloadUrl: 'assets/favorite-books/Decode and Conquer.pdf'
       }
     ];
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   downloadDocument(url: string, fileName: string): void {

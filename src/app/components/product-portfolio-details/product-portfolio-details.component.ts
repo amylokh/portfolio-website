@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -20,7 +20,7 @@ interface PortfolioCard {
   templateUrl: './product-portfolio-details.component.html',
   styleUrl: './product-portfolio-details.component.scss'
 })
-export class ProductPortfolioDetailsComponent {
+export class ProductPortfolioDetailsComponent implements OnInit {
   arrowIcon = faArrowLeft;
 
   portfolioCards: PortfolioCard[] = [
@@ -60,4 +60,8 @@ export class ProductPortfolioDetailsComponent {
       route: '/product-portfolio-details/favorite-books'
     }
   ];
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,11 +21,10 @@ interface MetricsDocument {
   templateUrl: './product-metrics.component.html',
   styleUrl: './product-metrics.component.scss'
 })
-export class ProductMetricsComponent {
+export class ProductMetricsComponent implements OnInit {
   arrowIcon = faArrowLeft;
   downloadIcon = faDownload;
   pdfIcon = faFilePdf;
-
   metricsDocument: MetricsDocument;
   products: string[] = [
     'Google Calendar',
@@ -55,6 +54,10 @@ export class ProductMetricsComponent {
       embeddedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('assets/product-metrics/Google Products - North Star Metric.pdf'),
       downloadUrl: 'assets/product-metrics/Google Products - North Star Metric.pdf'
     };
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   downloadDocument(url: string, fileName: string): void {

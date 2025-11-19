@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -23,7 +23,7 @@ interface Document {
   templateUrl: './guesstimates.component.html',
   styleUrl: './guesstimates.component.scss'
 })
-export class GuessestimatesComponent {
+export class GuessestimatesComponent implements OnInit {
   arrowIcon = faArrowLeft;
   downloadIcon = faDownload;
   excelIcon = faFileExcel;
@@ -87,6 +87,10 @@ export class GuessestimatesComponent {
         downloadUrl: 'assets/guesstimate-documents/market-sizing-reference.pdf'
       }
     ];
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   downloadDocument(url: string, fileName: string): void {

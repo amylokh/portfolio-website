@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,7 +21,7 @@ interface DesignDocument {
   templateUrl: './product-design.component.html',
   styleUrl: './product-design.component.scss'
 })
-export class ProductDesignComponent {
+export class ProductDesignComponent implements OnInit {
   arrowIcon = faArrowLeft;
   downloadIcon = faDownload;
   pdfIcon = faFilePdf;
@@ -52,6 +52,10 @@ export class ProductDesignComponent {
       embeddedUrl: this.sanitizer.bypassSecurityTrustResourceUrl('assets/product-design/Product Design Practice.pdf'),
       downloadUrl: 'assets/product-design/Product Design Practice.pdf'
     };
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   downloadDocument(url: string, fileName: string): void {
