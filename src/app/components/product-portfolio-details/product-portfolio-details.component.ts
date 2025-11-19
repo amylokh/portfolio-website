@@ -24,11 +24,11 @@ export class ProductPortfolioDetailsComponent {
 
   portfolioCards: PortfolioCard[] = [
     {
-      id: 'guesstimate',
+      id: 'guesstimates',
       title: 'Guesstimate',
       description: 'Explore estimation problems and techniques used in product management to make data-driven decisions.',
       icon: faCalculator,
-      route: '/under-construction'
+      route: '/product-portfolio-details/guesstimates'
     },
     {
       id: 'product-design',
