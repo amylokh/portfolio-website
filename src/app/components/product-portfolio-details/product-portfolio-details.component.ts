@@ -35,7 +35,7 @@ export class ProductPortfolioDetailsComponent {
       title: 'Product Design',
       description: 'Dive into product design problems, user experience considerations, and design thinking methodologies.',
       icon: faPalette,
-      route: '/under-construction'
+      route: '/product-portfolio-details/product-design'
     },
     {
       id: 'product-metrics',
@@ -49,7 +49,7 @@ export class ProductPortfolioDetailsComponent {
       title: 'Product Strategy',
       description: 'Understand strategic frameworks, market analysis, and long-term product vision planning.',
       icon: faBook,
-      route: '/under-construction'
+      route: '/product-portfolio-details/product-strategy'
     },
     {
       id: 'favorite-books',

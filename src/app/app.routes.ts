@@ -5,6 +5,8 @@ import { PageUnderProgressComponent } from './components/page-under-progress/pag
 import { ProductPortfolioDetailsComponent } from './components/product-portfolio-details/product-portfolio-details.component';
 import { GuessestimatesComponent } from './components/product-portfolio-details/guesstimates/guesstimates.component';
 import { ProductMetricsComponent } from './components/product-portfolio-details/product-metrics/product-metrics.component';
+import { ProductDesignComponent } from './components/product-portfolio-details/product-design/product-design.component';
+import { ProductStrategyComponent } from './components/product-portfolio-details/product-strategy/product-strategy.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +37,13 @@ export const routes: Routes = [
   {
     path: 'product-portfolio-details/product-metrics',
     component: ProductMetricsComponent
+  },
+  {
+    path: 'product-portfolio-details/product-design',
+    component: ProductDesignComponent
+  },
+  {
+    path: 'product-portfolio-details/product-strategy',
+    component: ProductStrategyComponent
   }
 ];
