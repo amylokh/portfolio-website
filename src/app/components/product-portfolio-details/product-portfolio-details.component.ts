@@ -57,7 +57,7 @@ export class ProductPortfolioDetailsComponent {
       title: 'My Favorite Books',
       description: 'Discover the books that shaped my understanding of product management and business strategy.',
       icon: faBook,
-      route: '/under-construction'
+      route: '/product-portfolio-details/favorite-books'
     }
   ];
 }

@@ -7,6 +7,7 @@ import { GuessestimatesComponent } from './components/product-portfolio-details/
 import { ProductMetricsComponent } from './components/product-portfolio-details/product-metrics/product-metrics.component';
 import { ProductDesignComponent } from './components/product-portfolio-details/product-design/product-design.component';
 import { ProductStrategyComponent } from './components/product-portfolio-details/product-strategy/product-strategy.component';
+import { FavoriteBooksComponent } from './components/product-portfolio-details/favorite-books/favorite-books.component';
 
 export const routes: Routes = [
   {
@@ -50,4 +51,8 @@ export const routes: Routes = [
     path: 'under-construction',
     component: PageUnderProgressComponent
   },
+  {
+    path: 'product-portfolio-details/favorite-books',
+    component: FavoriteBooksComponent
+  }
 ];

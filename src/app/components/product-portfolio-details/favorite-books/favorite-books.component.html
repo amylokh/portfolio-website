@@ -1,0 +1,132 @@
+<section class="py-16 px-4 md:px-8 bg-white min-h-screen">
+  <div class="max-w-6xl mx-auto">
+    <!-- Back Button -->
+    <a routerLink="/product-portfolio-details" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8 transition duration-300">
+      <fa-icon [icon]="arrowIcon"></fa-icon>
+      <span class="font-semibold">Back to Portfolio</span>
+    </a>
+
+    <!-- Header Section -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">My Favorite Books</h1>
+      <p class="text-xl text-gray-700 mb-4">
+        Essential reads for product management interviews and career growth.
+      </p>
+      <p class="text-lg text-gray-600">
+        A curated collection of books that have shaped my understanding of product management.
+      </p>
+    </div>
+
+    <!-- Overview Section -->
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600 p-8 rounded-lg mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-gray-900">Why These Books?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        These three books are essential resources for anyone preparing for product management roles or looking to deepen their understanding of PM fundamentals. They provide practical frameworks, real interview questions, and proven strategies for tackling complex product challenges.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Whether you're preparing for interviews, looking to improve your PM skills, or seeking to understand how successful PMs think and approach problems, these books offer valuable insights and actionable guidance.
+      </p>
+    </div>
+
+    <!-- Books Grid -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-gray-900">Books Collection</h2>
+      <p class="text-gray-600 mb-8">
+        Three must-read books for product management professionals and aspiring PMs.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let book of books" class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300 flex flex-col">
+          <!-- Book Icon -->
+          <div class="mb-6">
+            <fa-icon [icon]="bookIcon" class="text-5xl text-blue-600"></fa-icon>
+          </div>
+
+          <!-- Book Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ book.title }}</h3>
+              <p class="text-sm text-gray-600 font-semibold">{{ book.author }}</p>
+            </div>
+            <button 
+              (click)="downloadDocument(book.downloadUrl, book.fileName)"
+              class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 whitespace-nowrap flex-shrink-0 ml-2">
+              <fa-icon [icon]="downloadIcon" class="text-lg"></fa-icon>
+              <span class="text-sm">Download</span>
+            </button>
+          </div>
+
+          <!-- Book Description -->
+          <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ book.description }}</p>
+
+          <!-- Embedded PDF Preview -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden border border-gray-300 mb-4">
+            <iframe 
+              [src]="book.embeddedUrl" 
+              class="w-full"
+              style="height: 400px;"
+              title="{{ book.title }}"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- File Info -->
+          <p class="text-sm text-gray-500">{{ book.fileName }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Takeaways Section -->
+    <div class="bg-gradient-to-r from-indigo-50 to-blue-50 border-l-4 border-indigo-600 p-8 rounded-lg mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900">Key Takeaways</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-8 w-8 rounded-md bg-blue-600 text-white font-semibold">
+              1
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Master Interview Frameworks</p>
+            <p class="text-gray-700 text-sm">Learn proven frameworks and methodologies for answering PM questions consistently.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-8 w-8 rounded-md bg-blue-600 text-white font-semibold">
+              2
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Real Interview Questions</p>
+            <p class="text-gray-700 text-sm">Study actual questions asked at top tech companies with detailed solutions.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-8 w-8 rounded-md bg-blue-600 text-white font-semibold">
+              3
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Strategic Thinking Skills</p>
+            <p class="text-gray-700 text-sm">Develop the strategic and analytical thinking required to excel as a PM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg p-8 text-center">
+      <h3 class="text-2xl font-bold mb-4">Ready to Dive In?</h3>
+      <p class="text-lg mb-6 opacity-90">
+        Download these essential books and start your journey to mastering product management.
+      </p>
+      <a 
+        routerLink="/product-portfolio-details"
+        class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+        Back to Product Portfolio
+      </a>
+    </div>
+  </div>
+</section>

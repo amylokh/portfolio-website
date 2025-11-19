@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { fadeInUp } from '../../animations';
 
 @Component({
@@ -16,4 +17,5 @@ export class ContactComponent {
   emailIcon = faEnvelope;
   phoneIcon = faPhone;
   locationIcon = faLocationDot;
+  linkedinIcon = faLinkedin;
 }
