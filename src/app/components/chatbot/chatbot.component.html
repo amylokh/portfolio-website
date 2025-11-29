@@ -1,0 +1,37 @@
+<div class="chatbot-rect-container" [class.collapsed]="collapsed">
+  <div class="chatbot-header" (click)="toggleCollapse()">
+    <span class="chatbot-title">amylokh-gpt</span>
+    <button class="collapse-btn" [attr.aria-label]="collapsed ? 'Expand' : 'Collapse'">
+      <span *ngIf="!collapsed">&#x2212;</span>
+      <span *ngIf="collapsed">&#x2b;</span>
+    </button>
+  </div>
+  <div class="chatbot-body" *ngIf="!collapsed">
+    <div class="chatbot-messages fade-in" #messagesContainer>
+      <div *ngFor="let msg of messages" [class.user]="msg.role === 'user'" class="message" [class.bot]="msg.role === 'bot'">
+        <ng-container *ngIf="msg.role === 'bot'; else userMsg">
+          <span [appTypingEffect]="msg.content" *ngIf="isLastBotMessage(msg); else normalBot">{{ msg.content }}</span>
+          <ng-template #normalBot>{{ msg.content }}</ng-template>
+        </ng-container>
+        <ng-template #userMsg>{{ msg.content }}</ng-template>
+      </div>
+      <div *ngIf="isLoading" class="message bot">
+        <span class="typing-dots">
+          <span>.</span><span>.</span><span>.</span>
+        </span>
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input 
+        type="text"
+        [(ngModel)]="userInput"
+        (keyup.enter)="sendMessage()"
+        [disabled]="isLoading"
+        placeholder="Type your question..."
+      />
+      <button (click)="sendMessage()" [disabled]="isLoading || !userInput.trim()" class="send-btn" aria-label="Send">
+        <fa-icon [icon]="faPaperPlane" class="mr-2"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>

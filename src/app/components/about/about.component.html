@@ -1,30 +1,31 @@
-<section [@sectionAnimation] id="about" class="py-7">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+<section [@sectionAnimation] id="about" class="py-10">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <!-- Left: Photo and About Content -->
+      <div class="md:col-span-3 flex flex-col md:flex-row gap-8">
         <!-- Photo Section -->
         <div class="flex justify-center">
           <div class="relative">
-            <div class="w-64 h-64 overflow-hidden rounded-full border-4 border-[#2d6bff] shadow-lg">
+            <div class="w-56 h-56 md:w-64 md:h-64 overflow-hidden rounded-full border-4 border-[#2d6bff] shadow-lg">
               <img 
                 src="assets/images/profile.jpg" 
                 alt="Amey Lokhande" 
                 class="w-full h-full object-cover"
               />
             </div>
-            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-md text-center min-w-[160px]">
+            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-md text-center min-w-[140px] md:min-w-[160px]">
               <span class="text-[#2d6bff] font-semibold">
                 Product Enthusiast!
               </span>
             </div>
           </div>
         </div>
-  
         <!-- Content Section -->
-        <div class="text-left">
-          <h2 class="text-4xl font-bold text-[#1a2b3b] mb-6">
+        <div class="text-left flex-1">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1a2b3b] mb-6">
             Product Management Professional
           </h2>
-          <p class="text-lg text-[#4a5567] mb-8 leading-relaxed">
+          <p class="text-base md:text-lg text-[#4a5567] mb-8 leading-relaxed">
             With 4.5+ years of experience in product and technology roles, and an MBA in Business Analytics,
             I'm passionate about leveraging technical and analytical skills to drive user-centric product 
             development and strategic business growth.
@@ -46,4 +47,5 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
