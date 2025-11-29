@@ -1,6 +1,4 @@
-// ============================================================
-// Color Palette
-// ============================================================
+// Variables
 $primary-blue: #2d6bff;
 $primary-blue-dark: #1a5aff;
 $primary-blue-light: #b3cdfd;
@@ -11,18 +9,10 @@ $bg-message-bot: #eaf1ff;
 $shadow-sm: 0 1px 4px 0 rgba(45, 107, 255, 0.04);
 $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59, 0.08);
 
-// ============================================================
 // Animations
-// ============================================================
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes blink {
@@ -30,9 +20,7 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   50% { opacity: 0.4; }
 }
 
-// ============================================================
 // Main Container
-// ============================================================
 .chatbot-rect-container {
   width: 300px;
   height: 350px;
@@ -49,15 +37,13 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
 
   &.collapsed {
     height: 48px;
-    min-height: 0;
     width: 180px;
+    min-height: 0;
     cursor: pointer;
   }
 }
 
-// ============================================================
-// Header Section
-// ============================================================
+// Header
 .chatbot-header {
   background: $primary-blue;
   color: #fff;
@@ -67,8 +53,8 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   justify-content: space-between;
   font-weight: 600;
   font-size: 1.1rem;
-  cursor: pointer;
   min-height: 37px;
+  cursor: pointer;
 }
 
 .chatbot-title {
@@ -85,23 +71,19 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   margin-left: 0.5rem;
 }
 
-// ============================================================
-// Body Section
-// ============================================================
+// Body
 .chatbot-body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.75rem;
   background: $bg-light;
   animation: fadeIn 0.5s;
   height: 100%;
   min-height: 0;
 }
 
-// ============================================================
 // Messages Container
-// ============================================================
 .chatbot-messages {
   flex: 1 1 0%;
   overflow-y: auto;
@@ -112,30 +94,23 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   scroll-behavior: smooth;
   height: 100%;
   min-height: 0;
-
-  // Scrollbar styling for Firefox
   scrollbar-width: thin;
   scrollbar-color: $primary-blue $bg-message-bot;
 
-  // Scrollbar styling for Webkit browsers (Chrome, Safari, Edge)
   &::-webkit-scrollbar {
     width: 6px;
   }
-
   &::-webkit-scrollbar-thumb {
     background: $primary-blue;
     border-radius: 4px;
   }
-
   &::-webkit-scrollbar-track {
     background: $bg-message-bot;
     border-radius: 4px;
   }
 }
 
-// ============================================================
 // Messages
-// ============================================================
 .message {
   padding: 0.5rem 0.75rem;
   border-radius: 0.75rem;
@@ -152,7 +127,6 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
     color: #fff;
     border-bottom-right-radius: 0.2rem;
   }
-
   &.bot {
     align-self: flex-start;
     background: $bg-message-bot;
@@ -161,9 +135,7 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   }
 }
 
-// ============================================================
 // Input Section
-// ============================================================
 .chatbot-input {
   display: flex;
   align-items: center;
@@ -187,16 +159,13 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
     &::placeholder {
       font-size: 0.85rem;
     }
-
     &:focus {
       background: $bg-message-bot;
     }
   }
 }
 
-// ============================================================
 // Send Button
-// ============================================================
 .send-btn {
   background: $primary-blue;
   color: #fff;
@@ -213,15 +182,12 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
     background: $primary-blue-light;
     cursor: not-allowed;
   }
-
   &:hover:not(:disabled) {
     background: $primary-blue-dark;
   }
 }
 
-// ============================================================
 // Typing Indicator
-// ============================================================
 .typing-dots {
   display: inline-block;
   font-size: 1.2rem;
@@ -230,21 +196,7 @@ $shadow-md: 0 4px 24px 0 rgba(45, 107, 255, 0.10), 0 1.5px 6px 0 rgba(26, 43, 59
   animation: blink 1.2s infinite;
 }
 
-// ============================================================
-// Utility Classes
-// ============================================================
+// Utility
 .fade-in {
   animation: fadeIn 0.5s;
-}
-
-// ============================================================
-// Legacy/Deprecated Styles
-// ============================================================
-.chatbot-container {
-  border: 2px solid $primary-blue;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
